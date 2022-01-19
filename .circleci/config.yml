@@ -23,3 +23,4 @@
 # ssh $SSH_USER@$SSH_HOST "ansible dev -m command -a 'hostname'"
 # - run: ssh $SSH_USER@$SSH_HOST "ansible-playbook /home/ubuntu/ansible/playbook.yaml"
 # - run: ssh $SSH_USER@$SSH_HOST "ansible dev -i /home/ubuntu/ansible/inventory -m file -a 'path=/home/ubuntu/ubuntu_test.txt state=touch'"
+#- run: ssh $SSH_USER@$SSH_HOST "ansible all -i inventory -m ping"
