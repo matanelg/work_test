@@ -7,6 +7,7 @@
      steps:
        - checkout
        - run: pwd
+       - run: ls
        - run:
            name: Deploy Over SSH
            command: |
