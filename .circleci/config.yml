@@ -4,15 +4,19 @@
      machine:
        enabled: true
      steps:
+       - checkout
        - run:
            name: Deploy Over SSH
            command: |
-             ssh -t $SSH_USER@$SSH_HOST
+             ls
+             mkdir hello
+             scp -r ~/hello SSH_USER@$SSH_HOST:/home/ubuntu 
+             ssh $SSH_USER@$SSH_HOST
              hostname
        - run:
             name: Deploy Over SSH2
             command: |
-             ssh -t $SSH_USER@$SSH_HOST_PRIVATE
+             ssh $SSH_USER@$SSH_HOST_PRIVATE
              hostname
              touch text.text
  workflows:
