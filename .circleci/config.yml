@@ -1,6 +1,8 @@
  version: 2
  jobs:
    deploy:
+     machine:
+       enabled: true
      steps:
        - run:
            name: Deploy Over SSH
@@ -8,7 +10,7 @@
              hostname
              ssh -t $SSH_USER@$SSH_HOST
              hostname
-             ssh -t $SSH_USER@$SSH_HOST_PRIVATE
+             ssh -t $SSH_USER@$SSH_HOST_PRIVATE "touch text.text"
              touch text.text
              echo All Good
  workflows:
