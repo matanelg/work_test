@@ -3,8 +3,10 @@
    deploy:
      machine:
        enabled: true
-     working_directory: ~/
+     working_directory: ~/f
      steps:
+       - checkout
+       - run: pwd
        - run:
            name: Deploy Over SSH
            command: |
