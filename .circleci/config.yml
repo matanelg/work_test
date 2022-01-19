@@ -8,8 +8,12 @@
        - run:
            name: Deploy Over SSH
            command: |
-             ssh $SSH_USER@$SSH_HOST "hostname"
-             
+             ssh $SSH_USER@$SSH_HOST
+             hostname
+             SSH_USER@$SSH_HOST_PRIVATE
+             hostname
+             exit
+             exit
        - run:
             name: Deploy Over SSH2
             command: |
