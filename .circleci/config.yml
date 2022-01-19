@@ -10,7 +10,7 @@
            command: |
              ls
              mkdir hello
-             scp -r ~/hello "SSH_USER@$SSH_HOST:/home/ubuntu/"" 
+             scp -r ~/hello "SSH_USER@$SSH_HOST:/home/ubuntu/"
              ssh $SSH_USER@$SSH_HOST
              hostname
        - run:
