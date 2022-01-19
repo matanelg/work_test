@@ -8,9 +8,8 @@
            name: Deploy Over SSH
            command: |
              hostname
-             ssh -t $SSH_USER@$SSH_HOST
-             hostname
-             ssh -t $SSH_USER@$SSH_HOST_PRIVATE "touch text.text"
+             ssh $SSH_USER@$SSH_HOST "hostname"
+             ssh $SSH_USER@$SSH_HOST_PRIVATE "touch text.text"
              touch text.text
              echo All Good
  workflows:
