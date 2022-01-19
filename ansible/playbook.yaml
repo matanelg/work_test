@@ -1,8 +1,8 @@
 ---
-
+# same config file
 - hosts: all
   tasks:
-  - name: Creating an empty file
-    file:
-      path: "/home/ubuntu/from_ansible.txt"
-      state: touch
+  - name: create a new file on each host
+  - copy: 
+      content: "lala" 
+      dest: "/home/ubuntu/from_ansible.txt"
