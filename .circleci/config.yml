@@ -10,7 +10,7 @@
        - run: ls #
        - run: scp -r ./ansible "$SSH_USER@$SSH_HOST:/home/$SSH_USER" # for ansible from checkout
        - run: ssh $SSH_USER@$SSH_HOST "hostname"
-       - run: ssh $SSH_USER@$SSH_HOST "ansible dev -i /homoe/ubuntu/ansible/inventory -m file -a 'path=/home/ubuntu_test.txt state=touch'"
+       - run: ssh $SSH_USER@$SSH_HOST "ansible dev -i /home/ubuntu/ansible/inventory -m file -a 'path=/home/ubuntu_test.txt state=touch'"
 
  workflows:
    version: 2
