@@ -7,12 +7,12 @@
        - run:
            name: Deploy Over SSH
            command: |
-             ssh $SSH_USER@$SSH_HOST "hostname"
+             ssh -t $SSH_USER@$SSH_HOST
              hostname
        - run:
             name: Deploy Over SSH2
             command: |
-             ssh $SSH_USER@$SSH_HOST_PRIVATE "touch text.text"
+             ssh -t $SSH_USER@$SSH_HOST_PRIVATE
              hostname
              touch text.text
  workflows:
